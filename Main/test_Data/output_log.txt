@@ -1,0 +1,32 @@
+Initialize engine version: 4.5.5f1 (7684ad0c5a44)
+GfxDevice: creating device client; threaded=1
+d3d11: failed to create D3D11 device (0x887a0004)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [igdumd32.dll 8.15.10.1749]
+    Renderer: Intel(R) Q33 Express Chipset Family (Microsoft Corporation - WDDM 1.0)
+    Vendor:   Intel
+    VRAM:     64 MB (via DXGI)
+    Caps:     Shader=20 DepthRT=0 NativeDepth=0 NativeShadow=0 DF16=0 INTZ=0 RAWZ=0 NULL=0 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  2.657 seconds
+desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found.
+<RI> Input initialized.
+PlayerConnection accepted from [10.2.0.69] handle:0x2bc
+Profiler is only supported with Pro License
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/Runtime/Profiler/ProfilerConnection.cpp Line: 218)
+
+Waiting for finish
