@@ -19,7 +19,7 @@ Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Perio
 Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  2.310 seconds
+- Completed reload, in  5.068 seconds
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
