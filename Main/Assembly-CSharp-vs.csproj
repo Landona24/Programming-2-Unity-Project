@@ -74,7 +74,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>M:/Digital Media/Winikka/Programming 2/_Student Folders/Period4/adaml007/GitHub/Programming-2-Unity-Project/Main/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>M:/Digital Media/Winikka/Programming 2/_Student Folders/Period4/Skidt041/GitHub/Programming-2-Unity-Project/Main/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
