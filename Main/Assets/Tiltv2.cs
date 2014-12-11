@@ -7,6 +7,7 @@ public class Tiltv2 : MonoBehaviour {
 	public float limitDownRight = 330;
 	public float AxisVertical = 0;
 	public float AxisHorizontal = 0;
+	public bool origin = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,39 +17,45 @@ public class Tiltv2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Ball.transform.position.y < -5){
-			Application.LoadLevel(Application.loadedLevelName);
-		}
-
-		if (Input.GetAxis ("Vertical") != 0 || Input.GetAxis ("Horizontal") != 0) {
-			AxisVertical = Input.GetAxis ("Vertical");
-			AxisHorizontal = Input.GetAxis ("Horizontal");
-		}
-		else{
-			AxisVertical = 0;
-			AxisHorizontal = 0;
-		}
-//		if (Input.GetAxis("Mouse Y") != 0 || Input.GetAxis("Mouse X") != 0){
-//			AxisVertical = Input.GetAxis ("Mouse Y");
-//			AxisHorizontal = Input.GetAxis ("Mouse X");
-//		}
-
-		if ((Input.GetKey ("home"))) {
-			while (transform.localEulerAngles.x != 0 && transform.localEulerAngles.z != 0){
-				transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
+			transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
+			if(transform.localEulerAngles.x == 0 && transform.localEulerAngles.z == 0){
+				Application.LoadLevel(Application.loadedLevelName);
 			}
 		}
 		else{
-			if (AxisVertical > 0){
-				transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(limitDownRight,0,transform.localEulerAngles.z), (TiltSpeed * (AxisVertical)) * Time.deltaTime);
+			if (Input.GetAxis ("Vertical") != 0 || Input.GetAxis ("Horizontal") != 0) {
+				AxisVertical = Input.GetAxis ("Vertical");
+				AxisHorizontal = Input.GetAxis ("Horizontal");
 			}
-			if (AxisVertical < 0){
-				transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(limitUpLeft,0,transform.localEulerAngles.z), (TiltSpeed * -(AxisVertical)) * Time.deltaTime);
+			else{
+				AxisVertical = 0;
+				AxisHorizontal = 0;
 			}
-			if (AxisHorizontal < 0){
-				transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0, limitDownRight), (TiltSpeed * -(AxisHorizontal)) * Time.deltaTime);
+//			if (Input.GetAxis("Mouse Y") != 0 || Input.GetAxis("Mouse X") != 0){
+//				AxisVertical = Input.GetAxis ("Mouse Y");
+//				AxisHorizontal = Input.GetAxis ("Mouse X");
+//			}
+
+			if ((Input.GetKey ("home")) || origin) {
+				if(transform.localEulerAngles.x != 0 && transform.localEulerAngles.z != 0){
+					origin = true;
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
+				}
+				else{origin = false;}
 			}
-			if (AxisHorizontal > 0){	
-				transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0,limitUpLeft), (TiltSpeed * (AxisHorizontal)) * Time.deltaTime);
+			else{
+				if (AxisVertical > 0){
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(limitDownRight,0,transform.localEulerAngles.z), (TiltSpeed * (AxisVertical)) * Time.deltaTime);
+				}
+				if (AxisVertical < 0){
+					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(limitUpLeft,0,transform.localEulerAngles.z), (TiltSpeed * -(AxisVertical)) * Time.deltaTime);
+				}
+				if (AxisHorizontal < 0){
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0, limitDownRight), (TiltSpeed * -(AxisHorizontal)) * Time.deltaTime);
+				}
+				if (AxisHorizontal > 0){	
+					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0,limitUpLeft), (TiltSpeed * (AxisHorizontal)) * Time.deltaTime);
+				}
 			}
 		}
 	}
