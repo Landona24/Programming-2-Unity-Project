@@ -16,14 +16,14 @@ public class Tiltv2 : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Ball.transform.position.y < -5){//Ball reset below -5
+		if (Ball.transform.position.y < -5){
 			transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
 			if(transform.localEulerAngles.x == 0 && transform.localEulerAngles.z == 0){
 				Application.LoadLevel(Application.loadedLevelName);
 			}
 		}
 		else{
-			if (Input.GetAxis ("Vertical") != 0 || Input.GetAxis ("Horizontal") != 0) {//Axis
+			if (Input.GetAxis ("Vertical") != 0 || Input.GetAxis ("Horizontal") != 0) {
 				AxisVertical = Input.GetAxis ("Vertical");
 				AxisHorizontal = Input.GetAxis ("Horizontal");
 			}
@@ -36,7 +36,7 @@ public class Tiltv2 : MonoBehaviour {
 //				AxisHorizontal = Input.GetAxis ("Mouse X");
 //			}
 
-			if ((Input.GetKey ("home")) || origin) {//Rotation Origin
+			if ((Input.GetKey ("home")) || origin) {
 				if(transform.localEulerAngles.x != 0 && transform.localEulerAngles.z != 0){
 					origin = true;
 					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
@@ -44,16 +44,16 @@ public class Tiltv2 : MonoBehaviour {
 				else{origin = false;}
 			}
 			else{
-				if (AxisVertical > 0){//Down
+				if (AxisVertical > 0){
 					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(limitDownRight,0,transform.localEulerAngles.z), (TiltSpeed * (AxisVertical)) * Time.deltaTime);
 				}
-				if (AxisVertical < 0){//Up
+				if (AxisVertical < 0){
 					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(limitUpLeft,0,transform.localEulerAngles.z), (TiltSpeed * -(AxisVertical)) * Time.deltaTime);
 				}
-				if (AxisHorizontal < 0){//Right
+				if (AxisHorizontal < 0){
 					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0, limitDownRight), (TiltSpeed * -(AxisHorizontal)) * Time.deltaTime);
 				}
-				if (AxisHorizontal > 0){//Left
+				if (AxisHorizontal > 0){	
 					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0,limitUpLeft), (TiltSpeed * (AxisHorizontal)) * Time.deltaTime);
 				}
 			}
