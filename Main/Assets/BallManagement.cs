@@ -24,6 +24,6 @@ public class BallManagement : MonoBehaviour {
 //		}
 	// Update is called once per frame
 	void Update () {
-		Bv = (Mathf.Abs(transform.InverseTransformDirection(rigidbody.velocity).x)+Mathf.Abs(transform.InverseTransformDirection(rigidbody.velocity).z))/2;
+		Bv = (Mathf.Abs(transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity).x)+Mathf.Abs(transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity).z))/2;
 	}
 }

@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CameraMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu.js">
     <Files>
-      <File FileName="Assets\CameraMovement.cs" Line="20" Column="54" />
-      <File FileName="Assets\BallManagement.cs" Line="27" Column="57" />
+      <File FileName="Assets\Menu.js" Line="9" Column="2" />
+      <File FileName="Assets\CameraMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\BallManagement.cs" Line="1" Column="1" />
       <File FileName="Assets\Tiltv2.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
