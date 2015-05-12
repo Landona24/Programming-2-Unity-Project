@@ -1,75 +1,76 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class Tilt : MonoBehaviour {
-	public int tiltSpeed = 32;
-	public int limitUpLeft = 20;
-	public int limitDownRight = 340;
-	public float RX;
-	public float RZ;
+	public float TiltSpeed = 64;
+	public float limitUpLeft = 30;
+	public float limitDownRight = 330;
+	public float AxisVertical = 0;
+	public float AxisHorizontal = 0;
+	public bool origin = false;
+	public float iOx = 0;
+	public float iOy = 0;
+
 	// Use this for initialization
 	void Start () {
-		//transform.Rotate (Vector3.
+		if (Application.platform == RuntimePlatform.Android){
+			Input.gyro.enabled = true;
+			iOx = Input.gyro.rotationRate.x;
+			iOy = Input.gyro.rotationRate.y;
+		}
+		print (Application.platform);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		RX = transform.localEulerAngles.x;
-		RZ = transform.localEulerAngles.z;
+		transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, 4 * Time.deltaTime);
 
-		//if (transform.localEulerAngles.y != 0){
-		transform.eulerAngles=new Vector3(transform.eulerAngles.x,0,transform.eulerAngles.z);
+		//if (GameObject.Find("Ball").transform.position.y < -5){//Ball reset below -5
+		//	transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
+		//	if(transform.localEulerAngles.x == 0 && transform.localEulerAngles.z == 0){
+		//		Application.LoadLevel(Application.loadedLevelName);
+		//	}
 		//}
-		//transform.rotation = Quaternion.identity;
-//limiter
-		if (RX > limitUpLeft && RX < limitDownRight){
-			if (RX > limitUpLeft){
-				transform.eulerAngles=new Vector3(limitUpLeft,0,transform.eulerAngles.z);
+		//else{
+			if (Input.GetAxis ("Vertical") != 0 || Input.GetAxis ("Horizontal") != 0) {//Axis
+				//if (Application.platform == RuntimePlatform.Android){
+					//AxisHorizontal = iOx - Input.gyro.rotationRate.x;
+					//AxisVertical = iOy - Input.gyro.rotationRate.y;
+				//}
+				//if (Application.platform == RuntimePlatform.WindowsPlayer){
+					AxisVertical = Input.GetAxis ("Vertical");
+					AxisHorizontal = Input.GetAxis ("Horizontal");
+				//}
 			}
-			if (RX < limitDownRight){
-				transform.eulerAngles=new Vector3(limitDownRight,0,transform.eulerAngles.z);
+			else{
+				AxisVertical = 0;
+				AxisHorizontal = 0;
+			}
+//			if (Input.GetAxis("Mouse Y") != 0 || Input.GetAxis("Mouse X") != 0){
+//				AxisVertical = Input.GetAxis ("Mouse Y");
+//				AxisHorizontal = Input.GetAxis ("Mouse X");
+//			}
+
+			if ((Input.GetKey ("home")) || origin) {//Rotation Origin
+				if(transform.localEulerAngles.x != 0 && transform.localEulerAngles.z != 0){
+					origin = true;
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.identity, TiltSpeed * Time.deltaTime);
+				}
+				else{origin = false;}
+			}
+			else{
+				if (AxisVertical > 0){//Down
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(limitDownRight,0,transform.localEulerAngles.z), (TiltSpeed * (AxisVertical)) * Time.deltaTime);
+				}
+				if (AxisVertical < 0){//Up
+					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(limitUpLeft,0,transform.localEulerAngles.z), (TiltSpeed * -(AxisVertical)) * Time.deltaTime);
+				}
+				if (AxisHorizontal < 0){//Right
+					transform.localRotation = Quaternion.RotateTowards (transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0, limitDownRight), (TiltSpeed * -(AxisHorizontal)) * Time.deltaTime);
+				}
+				if (AxisHorizontal > 0){//Left
+					transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(transform.localEulerAngles.x,0,limitUpLeft), (TiltSpeed * (AxisHorizontal)) * Time.deltaTime);
+				}
 			}
 		}
-//movement
-		else{ 
-		//if (RX <= limitUpLeft && RX >= limitDownRight){
-			if ((Input.GetKey ("up")) ){// & (transform.eulerAngles.x < limitUpLeft) || (transform.eulerAngles.x > limitDownRight)){
-				transform.Rotate (Vector3.right, Time.deltaTime * tiltSpeed);
-			}
-			if ((Input.GetKey ("down")) ){// & (transform.eulerAngles.x < limitUpLeft) || (transform.eulerAngles.x > limitDownRight)){
-				transform.Rotate (Vector3.left, Time.deltaTime * tiltSpeed);
-			}
-		}
-
-
-		transform.eulerAngles=new Vector3(transform.eulerAngles.x,0,transform.eulerAngles.z);
-
-//limiter
-		if (RZ > limitUpLeft && RZ < limitDownRight){
-			if (RZ > limitUpLeft){
-				transform.eulerAngles=new Vector3(transform.eulerAngles.x,0,limitUpLeft);
-			}
-			if (RZ < limitDownRight){
-				transform.eulerAngles=new Vector3(transform.eulerAngles.x,0,limitDownRight);
-			}
-		}
-//movement
-		else{
-		//if (RZ <= limitUpLeft && RZ >= limitDownRight){
-			if ((Input.GetKey ("right")) ){// & (transform.eulerAngles.z < limitUpLeft) || (transform.eulerAngles.z > limitDownRight)){
-				transform.Rotate (Vector3.back, Time.deltaTime * tiltSpeed);
-			}
-			
-			if ((Input.GetKey ("left")) ){// & (transform.eulerAngles.z < limitUpLeft) || (transform.eulerAngles.z > limitDownRight)){
-				transform.Rotate (Vector3.forward, Time.deltaTime * tiltSpeed);
-			}
-		}
-
-		//transform.rotation = Quaternion.identity;
-
-
-		//if (Input.GetKey (KeyCode.None)){
-		//	transform.rotation = Quaternion.identity;
-		//}
 	}
-}
+//}
