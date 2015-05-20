@@ -6,19 +6,10 @@ public class Transition : MonoBehaviour {
 	public bool reset = false;
 	public Transform Active;
 	public float z = 0;
-	public Transform Ball = null;
-	public float Ballx = 0;
-	public float Bally = 0;
-	public float Ballz = 0;
 
 	// Use this for initialization
 	void Start () {
-		Active = this.transform.GetChild(Current-1);
 
-		Ball = GameObject.Find("Ball").transform;
-		Ballx = this.transform.localPosition.x;
-		Bally = this.transform.localPosition.y;
-		Ballz = this.transform.localPosition.z;
 	}
 
 	void OnCollisionStay(UnityEngine.Collision hit){
@@ -28,10 +19,6 @@ public class Transition : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp (KeyCode.Escape)) {
-			Application.LoadLevel (Application.loadedLevelName);
-		}
-
 		Active = this.transform.GetChild(Current-1);
 		ChildAmount = this.transform.childCount;
 
@@ -39,7 +26,6 @@ public class Transition : MonoBehaviour {
 			Input.ResetInputAxes ();
 
 			if (Active.transform.rotation.x == 0 && Active.transform.rotation.z == 0){
-				Ball.localPosition = new Vector3(Ballx,Bally,Ballz);
 
 				if (Active.transform.localPosition.y >= GameObject.Find("Main Camera").transform.localPosition.y){
 					if (Current == ChildAmount){
@@ -56,10 +42,6 @@ public class Transition : MonoBehaviour {
 							this.transform.GetChild(Current-1).transform.position = Vector3.zero;
 							reset = false;
 							Current++;
-						Ball = GameObject.Find ("Ball").transform;
-						Ballx = this.transform.localPosition.x;
-						Bally = this.transform.localPosition.y;
-						Ballz = this.transform.localPosition.z;
 
 						}
 					else{
@@ -77,13 +59,10 @@ public class Transition : MonoBehaviour {
 		}
 
 
-		if ((Input.GetKeyUp(KeyCode.PageUp)||(Ball.localPosition.y < -1) && (Current < ChildAmount+1))){
+		if (Input.GetKeyUp(KeyCode.PageUp) && Current < ChildAmount+1){
 			reset = true;
 
-			if (Current != ChildAmount){
-				this.transform.GetChild(Current).transform.position = new Vector3(0, -(GameObject.Find("Main Camera").transform.localPosition.y), 0);
-			}
-
+			//this.transform.GetChild(Current).transform.position = new Vector3(0, -(GameObject.Find("Main Camera").transform.localPosition.y), 0);
 			//Input.ResetInputAxes ();
 			//while (this.transform.localEulerAngles.x != 0 && this.transform.localEulerAngles.z != 0){
 
@@ -94,7 +73,7 @@ public class Transition : MonoBehaviour {
 			//}
 			//Current++;
 		}
-		if (Input.GetKeyUp(KeyCode.PageDown) && Current > 1){
+		if (Input.GetKeyUp (KeyCode.PageDown) && Current > 1){
 			this.transform.GetChild(Current-2).gameObject.SetActive(true);
 			this.transform.GetChild(Current-1).gameObject.SetActive(false);
 			Current--;
