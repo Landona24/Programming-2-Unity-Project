@@ -1,18 +1,12 @@
 ﻿#pragma strict
-var Platform : GameObject;
-Platform = GameObject.FindWithTag("Platform");
+//var Platform = GameObject.Find ("Platform").transform;;
 
 function Start () {
-	Platform.SetActive(false);
-}
-
-function Update () {
-	
+	//Platform.gameObject.SetActive(false);
 }
 
 function Play () {
-	Platform.SetActive(true);
-	GameObject.Find("Canvas").SetActive(false);
+	//Platform.gameObject.SetActive(true);
 }
 
 function Exit () {
