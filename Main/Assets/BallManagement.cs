@@ -22,8 +22,9 @@ public class BallManagement : MonoBehaviour {
 				//rigidbody.velocity = Bv;
 //			}
 //		}
+
 	// Update is called once per frame
-	void Update () {
+	void Update () {//reduced rebound velocity
 		Bv = (Mathf.Abs(transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity).x)+Mathf.Abs(transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity).y)+Mathf.Abs(transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity).z))/3;
 	}
 }
