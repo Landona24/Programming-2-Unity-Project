@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Transition.cs">
+    <Files>
+      <File FileName="Assets\Menu.js" Line="14" Column="10" />
+      <File FileName="Assets\Tilt.cs" Line="25" Column="44" />
+      <File FileName="Assets\Transition.cs" Line="59" Column="48" />
+      <File FileName="Assets\CameraMovement.cs" Line="32" Column="3" />
+      <File FileName="Assets\BallManagement.cs" Line="27" Column="44" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
