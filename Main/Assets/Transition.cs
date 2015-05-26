@@ -77,7 +77,7 @@ public class Transition : MonoBehaviour {
 		}
 
 
-		if ((Input.GetKeyUp(KeyCode.PageUp)||(Ball.localPosition.y < -1) && (Current < ChildAmount+1))){
+		if ((Input.GetKeyUp(KeyCode.PageUp)||(Ball.localPosition.y < -6) && (Current < ChildAmount+1))){
 			reset = true;
 
 			if (Current != ChildAmount){

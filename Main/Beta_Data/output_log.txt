@@ -1,38 +1,43 @@
-Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
-GfxDevice: creating device client; threaded=1
-d3d11: failed to create D3D11 device (0x887a0004)
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [igdumd32.dll 8.15.10.1749]
-    Renderer: Intel(R) Q33 Express Chipset Family (Microsoft Corporation - WDDM 1.0)
-    Vendor:   Intel
-    VRAM:     64 MB (via DXGI)
-    Caps:     Shader=20 DepthRT=0 NativeDepth=0 NativeShadow=0 DF16=0 INTZ=0 NULL=0 RESZ=0 SlowINTZ=0
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  2.210 seconds
-desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.054 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\adaml007\Desktop\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Programming-2-Unity-Project-6fe7a8d413ba1098d6796513b5ec691800277169\Main\Beta_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Landon\Documents\GitHub\Programming-2-Unity-Project\Main\Beta_Data\Managed\System.dll (this message is harmless)
 WindowsPlayer
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviour.gen.cs:108)
-Tilt:Start() (at M:\Digital Media\Winikka\Programming 2\_Student Folders\Period4\adaml007\GitHub\Programming-2-Unity-Project\Main\Assets\Tilt.cs:20)
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviour.gen.cs Line: 108)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.469756 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.224979 ms (FindLiveObjects: 0.053781 ms CreateObjectMapping: 0.009853 ms MarkObjects: 0.156828 ms  DeleteObjects: 0.004105 ms)
+
+WindowsPlayer
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
